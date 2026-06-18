@@ -12,7 +12,7 @@ st.subheader("교통약자를 위한 경기도 배리어프리 실시간 지도"
 # 2. 데이터셋 불러오기 함수 구동
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data.csv", encoding="utf-8-sig")
+    df = pd.read_csv("data.csv")
     df = df.dropna(subset=['시설위도', '시설경도'])
     return df
 
